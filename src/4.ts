@@ -39,7 +39,7 @@ class Person{
     constructor(key: Key) {
         this.key = key
     }
-    getKey() {
+    getKey():Key {
     return this.key
 }
 }
@@ -58,7 +58,7 @@ abstract class House {
     console.log('Person inside');
   }
 
-    public abstract openDoor(key: Key):boolean
+    public abstract openDoor(key: Key):void
 }
 
 class MyHouse extends House {
