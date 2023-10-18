@@ -52,7 +52,7 @@ abstract class House {
     
     comeIn(person: Person): void {
     if (!this.door) {
-      throw new Error('Door is close')
+      console.log('Door is close')
     }
     this.tenants.push(person)
     console.log('Person inside');
@@ -64,10 +64,10 @@ abstract class House {
 class MyHouse extends House {
     public openDoor(key: Key) {
         if (this.key.getSignature() !== key.getSignature()) {
-      throw new Error('The door is closed');
+      console.log('The door is closed');
         }
         console.log('The door is open');
-    return this.door = true;
+    this.door = true;
 }
 }
 
